@@ -1,0 +1,7 @@
+  name: TraderPlugin
+  main: com.nimu.TraderPlugin.TraderPlugin
+  version: 1.0.0
+  depend:
+  commands:
+    t:
+      description: "group of command"

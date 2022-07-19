@@ -30,6 +30,10 @@ public class Money {
     }
   public void Translate(Money otherPlayer, int quantity) throws SQLException {
       if (!otherPlayer.player.isDead() && TraderPlugin.getInstance().getServer().getPlayer(otherPlayer.player.getUniqueId()) != null){
+          if (otherPlayer.getPlayer().getUniqueId() == this.getPlayer().getUniqueId()){
+              player.sendMessage("You sent " + quantity + " to " + otherPlayer.player.getDisplayName());
+              return;
+          }
           if (amount - quantity > 0){
             otherPlayer.AddMoney(quantity);
             RemoveMoney(quantity);
