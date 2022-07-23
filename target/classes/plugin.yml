@@ -5,3 +5,25 @@
   commands:
     t:
       description: "group of command"
+
+  permissions:
+    traderplugin.admin.addmoney:
+      description: Can add money to a player
+    traderplugin.admin.removemoney:
+      description: Can remove money to a player
+    traderplugin.everyone.pay:
+      description: Can pay other player with his money
+    traderplugin.everyone.show:
+      description: Can see his money
+    traderplugin.admin.*:
+      description: Permission for admins
+      default: false
+      children:
+        traderplugin.admin.addmoney: true
+        traderplugin.admin.removemoney: true
+    traderplugin.everyone.*:
+      description: Permission for everyone
+      default: true
+      children:
+        traderplugin.everyone.pay: true
+        traderplugin.everyone.show: true
