@@ -3,6 +3,7 @@ package com.nimu.TraderPlugin.shop;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.nimu.TraderPlugin.TraderPlugin;
+import org.bukkit.Material;
 import org.bukkit.entity.Item;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -41,19 +42,14 @@ public class JsonShop {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        itemsSell = LoadItem();
         jsonParser = new JSONParser();
         try {
             jsonObject = (JSONObject) jsonParser.parse(new InputStreamReader(new FileInputStream(jsonFile), "UTF-8"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
+        itemsSell = LoadItem();
+
     }
     private ArrayList<ItemSell> LoadItem(){
         JSONArray json = (JSONArray) jsonObject.get("JsonShop");
@@ -77,7 +73,15 @@ public class JsonShop {
             e.printStackTrace();
         }
     }
-
+    public ItemSell getItemFromName(Material material){
+        String namemat = material.name();
+        for (ItemSell itemSell:itemsSell) {
+            if (namemat.equalsIgnoreCase(itemSell.getName())){
+                return itemSell;
+            }
+        }
+        return null;
+    }
     public ArrayList<ItemSell> getItemsSell(){
         return itemsSell;
     }

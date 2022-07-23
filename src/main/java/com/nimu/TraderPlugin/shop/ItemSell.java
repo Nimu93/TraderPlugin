@@ -5,11 +5,12 @@ public class ItemSell {
     int price_to_sell;
     int price_to_buy;
 
-   /* public ItemSell(String name, int price_to_sell, int price_to_buy){
+    public ItemSell(){}
+    public ItemSell(String name, int price_to_sell, int price_to_buy){
         this.name = name;
         this.price_to_buy = price_to_buy;
         this.price_to_sell = price_to_sell;
-    }*/
+    }
 
     public String getName(){
         return name;

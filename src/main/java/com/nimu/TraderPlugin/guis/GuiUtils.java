@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class GuiUtils {
     public static ItemStack createGuiItem(Material m, String name, int data, String... lore){
-        ItemStack item = new ItemStack(m, 1, data);
+        ItemStack item = new ItemStack(m, 1, (short) data);
         ItemMeta itemMeta = item.getItemMeta();
         itemMeta.setDisplayName(name);
         itemMeta.setLore(Arrays.asList(lore));

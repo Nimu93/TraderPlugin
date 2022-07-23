@@ -31,13 +31,18 @@ public class MoneyManager {
        }
    }
 
-   public Money getMoneyForPlayer(Player playerEntity) throws SQLException {
-       int i = DatabaseUtils.getMoney(TraderPlugin.DATABASE, playerEntity.getUniqueId().toString());
-     if (i == -1){
+   public Money getMoneyForPlayer(Player playerEntity) {
+       try {
+           int i = DatabaseUtils.getMoney(TraderPlugin.DATABASE, playerEntity.getUniqueId().toString());
+           if (i == -1) {
 
-         return null;
-     }
-       return new Money(playerEntity, i);
+               return null;
+           }
+           return new Money(playerEntity, i);
+       } catch (SQLException throwables) {
+           throwables.printStackTrace();
+       }
+       return null;
    }
 
    public void AddPlayerMoney(Player playerEntity) throws SQLException {

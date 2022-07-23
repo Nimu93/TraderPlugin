@@ -5,7 +5,7 @@
   commands:
     t:
       description: "group of command"
-
+  api-version: 1.12
   permissions:
     traderplugin.admin.addmoney:
       description: Can add money to a player

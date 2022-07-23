@@ -3,6 +3,7 @@ package com.nimu.TraderPlugin.manager;
 import com.nimu.TraderPlugin.TraderPlugin;
 import com.nimu.TraderPlugin.shop.ItemSell;
 import com.nimu.TraderPlugin.shop.JsonShop;
+import org.bukkit.inventory.ItemStack;
 
 
 public class ShopManager {
@@ -26,5 +27,25 @@ public class ShopManager {
     public void ChangeItem(ItemSell itemSell){
         RemoveItem(itemSell);
         AddItem(itemSell);
+    }
+    public int getPriceOfItem(ItemStack stack){
+        for (ItemSell itemsell:JsonShop.getItemsSell()) {
+            if (itemsell.getName().equals(stack.getType().name())){
+                return itemsell.getPrice_to_buy();
+            }
+        }
+        return -1;
+    }
+    public int getSellPriceOfItem(ItemStack stack){
+        for (ItemSell itemsell:JsonShop.getItemsSell()) {
+            if (itemsell.getName().equals(stack.getType().name())){
+                return itemsell.getPrice_to_sell();
+            }
+        }
+        return -1;
+    }
+
+    public com.nimu.TraderPlugin.shop.JsonShop getJsonShop() {
+        return JsonShop;
     }
 }

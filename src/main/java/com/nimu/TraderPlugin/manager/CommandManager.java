@@ -1,11 +1,13 @@
 package com.nimu.TraderPlugin.manager;
 
 import com.nimu.TraderPlugin.commands.CommandMoney;
+import com.nimu.TraderPlugin.guis.ShopGui;
 import com.nimu.TraderPlugin.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 
 public class CommandManager implements CommandExecutor{
@@ -25,6 +27,10 @@ public class CommandManager implements CommandExecutor{
             }
             return CommandMoney.showMoney(p, Bukkit.getPlayer(strings[1]));
         }
+        if (strings[0].equalsIgnoreCase("shop")){
+            new ShopGui().openInventory((HumanEntity) commandSender);
+        }
+
         if (strings[0].equalsIgnoreCase("add") && strings.length == 3){
             if (!Utils.isInteger(strings[2])){
                 p.sendMessage(strings[2] + " is not an integer !");

@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed77b3a-a93a-47e0-8ab6-8588983e3c10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TraderPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TraderPlugin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/TraderPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/TraderPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/commands/CommandMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/commands/CommandMoney.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/GuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/GuiUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/MoneyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/MoneyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/ShopManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/ShopManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/money/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/money/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/ConfirmGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/ConfirmGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/ItemSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/ItemSell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/JsonShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/JsonShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/utils/ParserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/PlayerActionShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/PlayerActionShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/TraderPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/TraderPlugin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/commands/CommandMoney.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/commands/CommandMoney.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/CommandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/CommandManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/utils/ParserUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/MoneyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/MoneyManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/ShopManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/ShopManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/shop/JsonShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/shop/JsonShop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,9 @@
       <workItem from="1658322024894" duration="3761000" />
       <workItem from="1658406682880" duration="1144000" />
       <workItem from="1658491665108" duration="7354000" />
-      <workItem from="1658559207518" duration="1684000" />
+      <workItem from="1658559207518" duration="5429000" />
+      <workItem from="1658565812386" duration="2585000" />
+      <workItem from="1658572873204" duration="13069000" />
     </task>
     <servers />
   </component>

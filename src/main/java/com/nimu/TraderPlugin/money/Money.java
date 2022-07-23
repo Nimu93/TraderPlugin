@@ -18,17 +18,25 @@ public class Money {
     this.player = player;
   }
 
-  public int AddMoney(int quantity) throws SQLException {
+  public int AddMoney(int quantity) {
       amount += quantity;
-      DatabaseUtils.UpdateMoney(TraderPlugin.DATABASE, this);
+      try {
+          DatabaseUtils.UpdateMoney(TraderPlugin.DATABASE, this);
+      } catch (SQLException throwables) {
+          throwables.printStackTrace();
+      }
       return amount;
   }
-    public int RemoveMoney(int quantity) throws SQLException {
+    public int RemoveMoney(int quantity){
         amount -= quantity;
-        DatabaseUtils.UpdateMoney(TraderPlugin.DATABASE, this);
+        try {
+            DatabaseUtils.UpdateMoney(TraderPlugin.DATABASE, this);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return amount;
     }
-  public void Translate(Money otherPlayer, int quantity) throws SQLException {
+  public void Translate(Money otherPlayer, int quantity){
       if (!otherPlayer.player.isDead() && TraderPlugin.getInstance().getServer().getPlayer(otherPlayer.player.getUniqueId()) != null){
           if (otherPlayer.getPlayer().getUniqueId() == this.getPlayer().getUniqueId()){
               player.sendMessage("You sent " + quantity + " to " + otherPlayer.player.getDisplayName());
