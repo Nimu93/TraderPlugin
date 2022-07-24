@@ -33,13 +33,16 @@ public class ConfirmGui implements Listener {
     }
 
     private void initGui(){
-        for (int _ =0; _ < 8; _++) {
-            ConfirmInventory.setItem(_,GuiUtils.createGuiItem(Material.STAINED_GLASS_PANE, "&eConfirm",15, "CONFIRM"));
+        ItemStack GLASS_PANEL = GuiUtils.createGuiItem(Material.STAINED_GLASS_PANE, "", 15, "CONFIRM");
+
+        for (int _ =0; _ < 12; _++) {
+            ConfirmInventory.setItem(_,GLASS_PANEL);
         }
-        ConfirmInventory.addItem(GuiUtils.createGuiItem(Material.WOOL, "Confirm "+title,13, " Click here for confirm "+title));
-        ConfirmInventory.addItem(GuiUtils.createGuiItem(Material.WOOL, "Cancel "+title,14, " Click here for cancel "+title));
-        for (int _ =0; _ < 8; _++) {
-            ConfirmInventory.setItem(_,GuiUtils.createGuiItem(Material.STAINED_GLASS_PANE, "&eConfirm",15, "CONFIRM"));
+        ConfirmInventory.setItem(12,GuiUtils.createGuiItem(Material.WOOL, "Confirm "+title,13, " Click here for confirm "+title));
+        ConfirmInventory.setItem(13,GLASS_PANEL);
+        ConfirmInventory.setItem(14, GuiUtils.createGuiItem(Material.WOOL, "Cancel "+title,14, " Click here for cancel "+title));
+        for (int _ =15; _ < 27; _++) {
+            ConfirmInventory.setItem(_,GLASS_PANEL);
         }
     }
 
@@ -52,7 +55,10 @@ public class ConfirmGui implements Listener {
         if (e.getCurrentItem() == null || (e.getCurrentItem().getType().equals(Material.AIR))){
             return;
         }
-        if (e.getCurrentItem().hasItemMeta() && e.getCurrentItem().getItemMeta().getDisplayName().startsWith("Confirm")){
+        if (e.getCurrentItem().getType().equals(Material.STAINED_GLASS_PANE)){
+            e.setCancelled(true);
+        }
+        else if (e.getCurrentItem().hasItemMeta() && e.getCurrentItem().getItemMeta().getDisplayName().startsWith("Confirm")){
             if (isBuying) {
                 if (!PlayerActionShop.BuyItem(e.getWhoClicked(), itemSell, number)) {
                     e.getWhoClicked().closeInventory();
@@ -73,6 +79,10 @@ public class ConfirmGui implements Listener {
             }
             }
 
+        }
+        else if (e.getCurrentItem().hasItemMeta() && e.getCurrentItem().getItemMeta().getDisplayName().startsWith("Cancel")) {
+            e.getWhoClicked().closeInventory();
+            new ShopGui().openInventory(e.getWhoClicked());
         }
         if (e.getCurrentItem() != null){
             e.setCancelled(true);

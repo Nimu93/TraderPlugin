@@ -6,24 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0ed77b3a-a93a-47e0-8ab6-8588983e3c10" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/TraderPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/TraderPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/commands/CommandMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/commands/CommandMoney.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/GuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/GuiUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/MoneyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/MoneyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/ShopManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/ShopManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/money/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/money/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/ConfirmGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/ConfirmGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/ItemSell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/ItemSell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/JsonShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/JsonShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/PlayerActionShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/PlayerActionShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/TraderPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/TraderPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/commands/CommandMoney.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/commands/CommandMoney.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/MoneyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/MoneyManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/ShopManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/manager/ShopManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/shop/JsonShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/shop/JsonShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/ConfirmGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/ConfirmGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/NumberBuyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/guis/NumberBuyGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,21 +54,6 @@
       <recent name="C:\Users\valgi\Desktop\programmation temps libre\TraderMod\TraderPlugin\src\main\java\com\nimu\TraderPlugin" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -119,7 +88,8 @@
       <workItem from="1658491665108" duration="7354000" />
       <workItem from="1658559207518" duration="5429000" />
       <workItem from="1658565812386" duration="2585000" />
-      <workItem from="1658572873204" duration="13069000" />
+      <workItem from="1658572873204" duration="13674000" />
+      <workItem from="1658646418189" duration="1528000" />
     </task>
     <servers />
   </component>

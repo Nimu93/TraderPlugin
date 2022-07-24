@@ -30,7 +30,18 @@ public class NumberBuyGui implements Listener {
         ItemStack one =GuiUtils.createGuiItem(m, title+" one", 0);
         ItemStack stack = GuiUtils.createGuiItem(m, title+" stack", 0);;
         ItemStack max =GuiUtils.createGuiItem(m, title+" max you have", 0);;
-        NumInventory.addItem(one,stack,max);
+        ItemStack GLASS_PANEL = GuiUtils.createGuiItem(Material.STAINED_GLASS_PANE, "", 15, "NUMBER");
+        for (int i = 0; i < 11; i++) {
+            NumInventory.setItem(i, GLASS_PANEL);
+        }
+        NumInventory.setItem(11, one);
+        NumInventory.setItem(12, GLASS_PANEL);
+        NumInventory.setItem(13, stack);
+        NumInventory.setItem(14, GLASS_PANEL);
+        NumInventory.setItem(15, max);
+        for (int i = 16; i < 27; i++) {
+            NumInventory.setItem(i, GLASS_PANEL);
+        }
     }
 
     public void openInventory(final HumanEntity ent) {
