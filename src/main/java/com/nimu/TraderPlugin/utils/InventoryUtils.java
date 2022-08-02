@@ -19,7 +19,7 @@ public class InventoryUtils {
             if (itemStack1.getType().equals(itemStack.getType())){
                 if (itemStack1.getAmount() - quantity < 0){
                     inventory.setItem(i, null);
-                    quantity-=itemStack.getAmount();
+                    quantity-=itemStack1.getAmount();
                 }
                 else {
                     inventory.getItem(i).setAmount(itemStack1.getAmount() - quantity);
@@ -30,12 +30,14 @@ public class InventoryUtils {
     }
     public static void AddItems(HumanEntity humanEntity, ItemStack itemStack, int quantity){
         Inventory inventory = humanEntity.getInventory();
+
         for (int i = 0; i < inventory.getSize()-5; i++) {
             if(quantity == 0){
                 return;
             }
-            if (inventory.getItem(i) == null){
-                ItemStack res = itemStack;
+            ItemStack itemStack1 = inventory.getItem(i);
+            if (itemStack1 == null){
+                ItemStack res = new ItemStack(itemStack.getType(),0);
                 if (quantity - itemStack.getMaxStackSize() < 0){
                     res.setAmount(quantity);
                     quantity = 0;
@@ -46,9 +48,14 @@ public class InventoryUtils {
                 inventory.setItem(i, res);
 
             }
-            else if(inventory.getItem(i).getType().equals(itemStack.getType())){
-                inventory.getItem(i).setAmount(quantity);
-                quantity -= itemStack.getMaxStackSize();
+            else if(itemStack1.getType().equals(itemStack.getType()) && itemStack1.getAmount() < itemStack1.getMaxStackSize()){
+                int diff = itemStack1.getMaxStackSize() - itemStack1.getAmount();
+                if (quantity - diff > 0) {
+                    inventory.getItem(i).setAmount(itemStack1.getMaxStackSize());
+                }else {
+                    inventory.getItem(i).setAmount(itemStack1.getAmount() + quantity);
+                }
+                quantity -= diff;
             }
         }
     }

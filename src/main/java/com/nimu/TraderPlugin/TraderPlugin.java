@@ -1,15 +1,12 @@
 package com.nimu.TraderPlugin;
 
 import com.nimu.TraderPlugin.database.Database;
-import com.nimu.TraderPlugin.guis.GuiUtils;
-import com.nimu.TraderPlugin.guis.ShopGui;
-import com.nimu.TraderPlugin.listeners.ListenerGuis;
+import com.nimu.TraderPlugin.listeners.ListenerShop;
 import com.nimu.TraderPlugin.listeners.MoneyListener;
 import com.nimu.TraderPlugin.manager.CommandManager;
 import com.nimu.TraderPlugin.manager.MoneyManager;
 import com.nimu.TraderPlugin.manager.ShopManager;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
+import com.nimu.TraderPlugin.packets.PacketManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -35,8 +32,9 @@ public class TraderPlugin extends JavaPlugin {
         SHOP_MANAGER = new ShopManager();
         this.getCommand("t").setExecutor(new CommandManager());
         getServer().getPluginManager().registerEvents(new MoneyListener(), this);
-        ListenerGuis.registerListenerGuis();
-        getServer().getPluginManager().registerEvents(new ListenerGuis(), this);
+        ListenerShop.registerListenerGuis();
+        getServer().getPluginManager().registerEvents(new ListenerShop(), this);
+        PacketManager.RegisterChannel();
 
     }
 

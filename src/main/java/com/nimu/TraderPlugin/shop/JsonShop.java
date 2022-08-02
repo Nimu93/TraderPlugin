@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class JsonShop {
     private File jsonFile;
-    private JSONObject jsonObject;
+    public JSONObject jsonObject;
     private JSONParser jsonParser;
     private ArrayList<ItemSell> itemsSell;
 
@@ -54,7 +54,6 @@ public class JsonShop {
     private ArrayList<ItemSell> LoadItem(){
         JSONArray json = (JSONArray) jsonObject.get("JsonShop");
         ArrayList<ItemSell> res = new ArrayList<ItemSell>();
-        System.out.println(json.get(0).toString());
         Gson gson = new Gson();
         for (int i = 0; i <json.size(); i++){
            res.add(gson.fromJson(json.get(i).toString(), ItemSell.class));
