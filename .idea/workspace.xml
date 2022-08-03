@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ed77b3a-a93a-47e0-8ab6-8588983e3c10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TraderPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TraderPlugin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/TraderPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/TraderPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/listeners/ListenerGuis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/listeners/ListenerShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/JsonShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/shop/JsonShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/utils/InventoryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/utils/InventoryUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/TraderPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/TraderPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/guis/ConfirmGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/guis/ConfirmGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/listeners/ListenerGuis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/shop/JsonShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nimu/TraderPlugin/shop/JsonShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nimu/TraderPlugin/manager/CommandManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +110,8 @@
       <workItem from="1659361922529" duration="343000" />
       <workItem from="1659362273500" duration="2769000" />
       <workItem from="1659439189212" duration="3373000" />
-      <workItem from="1659444383347" duration="2210000" />
+      <workItem from="1659444383347" duration="2529000" />
+      <workItem from="1659532753907" duration="781000" />
     </task>
     <servers />
   </component>

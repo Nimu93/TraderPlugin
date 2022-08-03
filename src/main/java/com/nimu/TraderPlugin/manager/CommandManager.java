@@ -1,5 +1,6 @@
 package com.nimu.TraderPlugin.manager;
 
+import com.nimu.TraderPlugin.TraderPlugin;
 import com.nimu.TraderPlugin.commands.CommandMoney;
 import com.nimu.TraderPlugin.guis.ShopGui;
 import com.nimu.TraderPlugin.utils.Utils;
@@ -27,7 +28,7 @@ public class CommandManager implements CommandExecutor{
             }
             return CommandMoney.showMoney(p, Bukkit.getPlayer(strings[1]));
         }
-        if (strings[0].equalsIgnoreCase("shop")){
+        if (strings[0].equalsIgnoreCase("shop") && !TraderPlugin.getInstance().getConfig().getBoolean("useforge")){
             new ShopGui().openInventory((HumanEntity) commandSender);
         }
 

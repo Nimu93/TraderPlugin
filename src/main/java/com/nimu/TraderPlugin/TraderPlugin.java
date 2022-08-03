@@ -7,6 +7,7 @@ import com.nimu.TraderPlugin.manager.CommandManager;
 import com.nimu.TraderPlugin.manager.MoneyManager;
 import com.nimu.TraderPlugin.manager.ShopManager;
 import com.nimu.TraderPlugin.packets.PacketManager;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class TraderPlugin extends JavaPlugin {
 
     @Override
     public void onEnable(){
+        this.saveDefaultConfig();
         try {
             DATABASE = new Database(PATH);
         } catch (IOException e) {
@@ -32,10 +34,12 @@ public class TraderPlugin extends JavaPlugin {
         SHOP_MANAGER = new ShopManager();
         this.getCommand("t").setExecutor(new CommandManager());
         getServer().getPluginManager().registerEvents(new MoneyListener(), this);
-        ListenerShop.registerListenerGuis();
-        getServer().getPluginManager().registerEvents(new ListenerShop(), this);
-        PacketManager.RegisterChannel();
-
+        if (getConfig().getBoolean("useforge")) {
+            ListenerShop.registerListenerGuis();
+        }else {
+            getServer().getPluginManager().registerEvents(new ListenerShop(), this);
+            PacketManager.RegisterChannel();
+        }
     }
 
     public static TraderPlugin getInstance(){
