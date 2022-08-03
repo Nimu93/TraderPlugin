@@ -22,11 +22,6 @@ public class ShopManager {
     }
     public void SaveChange(){
         JsonShop.SaveItem(TraderPlugin.getInstance().PATH);
-        JsonShop.refreshConnection(TraderPlugin.getInstance().PATH);
-    }
-    public void ChangeItem(ItemSell itemSell){
-        RemoveItem(itemSell);
-        AddItem(itemSell);
     }
     public int getPriceOfItem(ItemStack stack){
         for (ItemSell itemsell:JsonShop.getItemsSell()) {

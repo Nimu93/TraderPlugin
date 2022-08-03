@@ -16,11 +16,9 @@ public class PacketListener implements PluginMessageListener {
         String content = new String(bytes);
         PacketCustom packetCustom = PacketCustom.getPacket(content);
         assert packetCustom != null;
-        System.out.println(packetCustom.message);
         if (packetCustom.id == ID.CHECKVERIF.getType()){
 
             String[] arg = packetCustom.message.split("!");
-            System.out.println(Boolean.getBoolean(arg[2]));
             if (arg[2].equals("false")){
             if(PlayerActionShop.BuyItem(player, TraderPlugin.SHOP_MANAGER.getJsonShop().getItemFromName(Material.getMaterial(arg[1].toUpperCase())), Integer.parseInt(arg[0]))
             ){

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class JsonShop {
     private File jsonFile;
-    public JSONObject jsonObject;
+    public JSONArray jsonObject;
     private JSONParser jsonParser;
     private ArrayList<ItemSell> itemsSell;
 
@@ -44,7 +44,7 @@ public class JsonShop {
         }
         jsonParser = new JSONParser();
         try {
-            jsonObject = (JSONObject) jsonParser.parse(new InputStreamReader(new FileInputStream(jsonFile), "UTF-8"));
+            jsonObject = (JSONArray) jsonParser.parse(new InputStreamReader(new FileInputStream(jsonFile), "UTF-8"));
         } catch (ParseException | IOException e) {
             e.printStackTrace();
         }
@@ -52,7 +52,7 @@ public class JsonShop {
 
     }
     private ArrayList<ItemSell> LoadItem(){
-        JSONArray json = (JSONArray) jsonObject.get("JsonShop");
+        JSONArray json = jsonObject;
         ArrayList<ItemSell> res = new ArrayList<ItemSell>();
         Gson gson = new Gson();
         for (int i = 0; i <json.size(); i++){

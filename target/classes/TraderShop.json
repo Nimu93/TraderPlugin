@@ -1,9 +1,0 @@
-{
- "JsonShop": [
-   {
-    "name": "diamond",
-    "price_to_sell": 500,
-    "price_to_buy": 5000
-  }
- ]
-}

@@ -28,7 +28,7 @@ public class CommandManager implements CommandExecutor{
             }
             return CommandMoney.showMoney(p, Bukkit.getPlayer(strings[1]));
         }
-        if (strings[0].equalsIgnoreCase("shop") && !TraderPlugin.getInstance().getConfig().getBoolean("useforge")){
+        if (strings[0].equalsIgnoreCase("shop") &&TraderPlugin.getInstance().getConfig().getString("useforge").equals("false")){
             new ShopGui().openInventory((HumanEntity) commandSender);
         }
 

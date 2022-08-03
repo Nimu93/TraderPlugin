@@ -5,6 +5,8 @@
   commands:
     t:
       description: "group of command"
+    shopadmin:
+      description: "group of command for config"
   api-version: 1.12
   permissions:
     traderplugin.admin.addmoney:
@@ -27,3 +29,4 @@
       children:
         traderplugin.everyone.pay: true
         traderplugin.everyone.show: true
+

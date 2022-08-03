@@ -3,6 +3,7 @@ package com.nimu.TraderPlugin;
 import com.nimu.TraderPlugin.database.Database;
 import com.nimu.TraderPlugin.listeners.ListenerShop;
 import com.nimu.TraderPlugin.listeners.MoneyListener;
+import com.nimu.TraderPlugin.manager.CommandAdminManager;
 import com.nimu.TraderPlugin.manager.CommandManager;
 import com.nimu.TraderPlugin.manager.MoneyManager;
 import com.nimu.TraderPlugin.manager.ShopManager;
@@ -33,11 +34,12 @@ public class TraderPlugin extends JavaPlugin {
         INSTANCE = this;
         SHOP_MANAGER = new ShopManager();
         this.getCommand("t").setExecutor(new CommandManager());
+        this.getCommand("shopadmin").setExecutor(new CommandAdminManager());
         getServer().getPluginManager().registerEvents(new MoneyListener(), this);
-        if (getConfig().getBoolean("useforge")) {
-            ListenerShop.registerListenerGuis();
-        }else {
+        System.out.println(getConfig().getString("useforge"));
+        if (getConfig().getString("useforge").equals("false")) {
             getServer().getPluginManager().registerEvents(new ListenerShop(), this);
+        }else {
             PacketManager.RegisterChannel();
         }
     }
