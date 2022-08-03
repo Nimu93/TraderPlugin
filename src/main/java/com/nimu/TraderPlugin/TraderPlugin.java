@@ -1,14 +1,14 @@
 package com.nimu.TraderPlugin;
 
 import com.nimu.TraderPlugin.database.Database;
-import com.nimu.TraderPlugin.listeners.ListenerShop;
+import com.nimu.TraderPlugin.listeners.PlayerListener;
+import com.nimu.TraderPlugin.listeners.ShopListener;
 import com.nimu.TraderPlugin.listeners.MoneyListener;
 import com.nimu.TraderPlugin.manager.CommandAdminManager;
 import com.nimu.TraderPlugin.manager.CommandManager;
 import com.nimu.TraderPlugin.manager.MoneyManager;
 import com.nimu.TraderPlugin.manager.ShopManager;
 import com.nimu.TraderPlugin.packets.PacketManager;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -36,10 +36,10 @@ public class TraderPlugin extends JavaPlugin {
         this.getCommand("t").setExecutor(new CommandManager());
         this.getCommand("shopadmin").setExecutor(new CommandAdminManager());
         getServer().getPluginManager().registerEvents(new MoneyListener(), this);
-        System.out.println(getConfig().getString("useforge"));
         if (getConfig().getString("useforge").equals("false")) {
-            getServer().getPluginManager().registerEvents(new ListenerShop(), this);
+            getServer().getPluginManager().registerEvents(new ShopListener(), this);
         }else {
+            getServer().getPluginManager().registerEvents(new PlayerListener(), this);
             PacketManager.RegisterChannel();
         }
     }
